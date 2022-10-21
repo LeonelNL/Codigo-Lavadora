@@ -1,0 +1,17 @@
+#	Componente				PIN
+
+1	Led Start/Pausa			F0
+2	Led ciclo 1				F1
+3	Led ciclo 2				F2
+4	Led ciclo 3				F3
+5	Led ciclo 4				F4
+6	Boton Pausa/Start			A2
+7	Boton Ciclo 1			A3
+8	Boton Ciclo 2			A4
+9	Boton Ciclo 3			A5
+10	Boton Ciclo 4			D6
+11	Servomotor360			F2
+12	Sensor de corriente		A6, A7
+13	Sensor de Agua			D0
+14	Bomba de agua			C4
+15	Electovalvula/Bomba drenado	C5
