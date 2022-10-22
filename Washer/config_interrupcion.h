@@ -10,8 +10,9 @@
 #include "driverlib/timer.h"
 
 #define CycleButtons GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4
-uint8_t state = 0;
+uint8_t state;
 uint8_t BotonPulsado;
+uint8_t BotonPresionado;
 
 void GPIOIntHandler()
 {
@@ -29,3 +30,4 @@ void GPIOIntHandler()
             break;
     }
 }
+

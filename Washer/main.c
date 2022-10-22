@@ -11,19 +11,12 @@
 #include "highdefault.h"
 #include "config_pines.h"
 
-#define CycleLeds GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4
-#define CycleButtons GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4
-
-uint8_t CurrentState = 0;
-
-
 int main(void)
 {
    ConfiguracionPines();
 
    while(1)
     {
-        HighCycleLedDefault(CurrentState);
-        SysCtlDelay(3000000);
+        HighCycleLedDefault(BotonPulsado);
     }
 }
