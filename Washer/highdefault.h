@@ -27,9 +27,6 @@ void HighCycleLedDefault(CurrentState){
         case 6:                                                 // Cycle run, LED START ON
             GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 1);
             break;
-        default:
-            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 1);
-            break;
     }
 }
 
