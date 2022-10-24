@@ -5,11 +5,11 @@
 3	Led ciclo 2				F2
 4	Led ciclo 3				F3
 5	Led ciclo 4				F4
-6	Boton Pausa/Start			A2
-7	Boton Ciclo 1			A3
-8	Boton Ciclo 2			A4
-9	Boton Ciclo 3			A5
-10	Boton Ciclo 4			D6
+6	Boton Pausa/Start			B0
+7	Boton Ciclo 1			B1
+8	Boton Ciclo 2			B2
+9	Boton Ciclo 3			B3
+10	Boton Ciclo 4			B4
 11	Servomotor360			F2
 12	Sensor de corriente		A6, A7
 13	Sensor de Agua			D0

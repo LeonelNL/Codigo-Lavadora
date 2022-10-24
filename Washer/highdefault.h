@@ -9,23 +9,35 @@ uint8_t CurrentState;
 
 void HighCycleLedDefault(CurrentState){
     switch(CurrentState){
-        case 1:                                                 // IDLE LEDS OFF
-            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 0);
-            break;
-        case 2:                                                 // Boton Start, High (Ciclo 1) LED CICLO 1 ON
-            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 2);
-            break;
-        case 3:                                                 // Boton ciclo 2 LED CICLO 2 ON
-            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 4);
-            break;
-        case 4:                                                 // Boton ciclo 3 LED CICLO 3 ON
-            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 8);
-            break;
-        case 5:                                                 // Boton ciclo 4 LED CICLO 4 ON
+        case 0:                                                 // Recien Endencido ciclo HIGH
             GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 16);
             break;
-        case 6:                                                 // Cycle run, LED START ON
+        case 1:                                                 //  High (Ciclo 1) LED CICLO 1 ON
+            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 16);
+            break;
+        case 2:                                                 // BOTON START
             GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 1);
+            break;
+        case 3:                                                 // Bonton MEDIUM
+            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 8);
+            break;
+        case 4:                                                 // Boton LOW
+            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 4);
+            break;
+        case 5:                                                 // Boton AU
+            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 2);
+            break;
+        case 6:                                                 // Boton AU
+            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 17);
+            break;
+        case 7:                                                 // Boton AU
+            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 9);
+            break;
+        case 8:                                                 // Boton AU
+            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 5);
+            break;
+        case 9:                                                 // Boton AU
+            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 3);
             break;
     }
 }
