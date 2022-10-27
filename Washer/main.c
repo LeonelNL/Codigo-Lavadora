@@ -8,15 +8,34 @@
 #include "driverlib/interrupt.h"
 #include "driverlib/gpio.h"
 #include "driverlib/timer.h"
+#include "driverlib/pin_map.h"
 #include "highdefault.h"
 #include "config_pines.h"
+#include "definiciones.h"
+#include "driverlib/uart.h"
+#include "configuracionUART.h"
+
 
 int main(void)
 {
    ConfiguracionPines();
-
+   ConfigUART();
    while(1)
     {
         HighCycleLedDefault(BotonPulsado);
+        UARTCharPut(UART0_BASE, '#');
+        UARTCharPut(UART0_BASE, 'E');
+        UARTCharPut(UART0_BASE, 'n');
+        UARTCharPut(UART0_BASE, 't');
+        UARTCharPut(UART0_BASE, 'e');
+        UARTCharPut(UART0_BASE, 'r');
+        UARTCharPut(UART0_BASE, ' ');
+        UARTCharPut(UART0_BASE, 'T');
+        UARTCharPut(UART0_BASE, 'e');
+        UARTCharPut(UART0_BASE, 'x');
+        UARTCharPut(UART0_BASE, 't');
+        UARTCharPut(UART0_BASE, '&');
+        SysCtlDelay(1333333);
     }
 }
+

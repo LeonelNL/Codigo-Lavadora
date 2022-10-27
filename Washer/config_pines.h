@@ -9,6 +9,7 @@
 #include "driverlib/gpio.h"
 #include "driverlib/timer.h"
 #include "config_interrupcion.h"
+#include "definiciones.h"
 
 #define CycleLeds GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4
 #define CycleButtons GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4
@@ -16,7 +17,8 @@
 
 void ConfiguracionPines()
 {
-    SysCtlClockSet(SYSCTL_SYSDIV_5|SYSCTL_USE_PLL|SYSCTL_XTAL_16MHZ|SYSCTL_OSC_MAIN);
+    SysCtlClockSet(SYSCTL_SYSDIV_5|SYSCTL_USE_PLL|SYSCTL_OSC_MAIN|SYSCTL_XTAL_16MHZ);
+
     /*-------------------- Configuracion de los LEDS de ciclos -------------------*/
     SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
     GPIOUnlockPin(GPIO_PORTF_BASE, GPIO_PIN_0);
