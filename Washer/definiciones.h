@@ -15,3 +15,16 @@
 #define CicloLowSerial 'J'
 #define CicloAuSerial 'K'
 #define StartCicloSerial 'L'
+#define IdleState 0
+#define StandbyState 1
+#define RunState 2
+#define PauseState 3
+#define EndOfCycle 4
+#define LlenadoLavado
+#define Lavado
+#define VaciadoLavado
+#define LlenadoEnjuague
+#define Enjuague
+#define VaciadoEnjuague
+#define Secado
+#define LedsOff

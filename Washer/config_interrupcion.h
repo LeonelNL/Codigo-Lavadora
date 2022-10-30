@@ -7,10 +7,9 @@
 #include "driverlib/sysctl.h"
 #include "driverlib/interrupt.h"
 #include "driverlib/gpio.h"
-#include "driverlib/timer.h"
 
 #define CycleButtons GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4
-uint8_t state = 1;
+uint8_t state = 0;
 uint8_t BotonPulsado;
 uint8_t BotonHigh, BotonMedium, BotonLow, BotonAU;
 
@@ -18,7 +17,6 @@ void GPIOIntHandler()
 {
     GPIOIntClear(GPIO_PORTB_BASE, GPIO_INT_PIN_0|GPIO_INT_PIN_1|GPIO_INT_PIN_2|GPIO_INT_PIN_3|GPIO_INT_PIN_4);
     state = GPIOIntStatus(GPIO_PORTB_BASE, true);
-
 
     switch (state){
         case 1:                                                                 //BotonStart

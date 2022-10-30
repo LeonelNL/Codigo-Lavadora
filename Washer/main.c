@@ -35,7 +35,7 @@ int main(void)
         UARTCharPut(UART0_BASE, 'x');
         UARTCharPut(UART0_BASE, 't');
         UARTCharPut(UART0_BASE, '&');
-        SysCtlDelay(1333333);
+        SysCtlDelay(133333);
     }
 }
 
