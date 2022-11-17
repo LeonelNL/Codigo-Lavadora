@@ -9,8 +9,7 @@
 #include "driverlib/sysctl.h"
 #include "driverlib/uart.h"
 
-char dato[0];
-uint32_t i = 0;
+char dato[1];
 
 
 void ConfigUART()
@@ -37,8 +36,8 @@ void UARTIntHandler(void)
 
     while(UARTCharsAvail(UART0_BASE)) //loop while there are chars
     {
-        dato[i] = UARTCharGetNonBlocking(UART0_BASE);
-        switch(dato[i])
+        dato[0] = UARTCharGetNonBlocking(UART0_BASE);
+        switch(dato[0])
         {
             case NivelBajoSerial:
 
@@ -52,40 +51,48 @@ void UARTIntHandler(void)
 
                 break;
 
-            case BombaDrenadoOnSerial:
-
-                break;
-
-            case BombaDrenadoOffSerial:
-
-                break;
-
-            case BombaLlenadoOnSerial:
-
-                break;
-
-            case BombaLlenadoOffSerial:
-
-                break;
-
             case CicloHighSerial:
-                BotonPulsado = 1;
+                BotonPulsado1 = 1;
+                BotonHigh1 = 1;
+                BotonMedium1 = 0, BotonLow1 = 0, BotonAU1 = 0;
                 break;
 
             case CicloMediumSerial:
-                BotonPulsado = 3;
+                BotonPulsado1 = 3;
+                BotonMedium1 = 1;
+                BotonHigh1 = 0, BotonLow1 = 0, BotonAU1 = 0;
                 break;
 
             case CicloLowSerial:
-                BotonPulsado = 4;
+                BotonPulsado1 = 4;
+                BotonLow1 = 1;
+                BotonHigh1 = 0, BotonMedium1 = 0, BotonAU1 = 0;
                 break;
 
             case CicloAuSerial:
-                BotonPulsado = 5;
+                BotonPulsado1 = 5;
+                BotonAU1 = 1;
+                BotonHigh1 = 0, BotonLow1 = 0, BotonMedium1 = 0;
                 break;
 
             case StartCicloSerial:
-                BotonPulsado = 2;
+                BotonPulsado1 = 2;
+                if(BotonHigh1 == 1)
+                {
+                    BotonPulsado1 = 6;
+                }
+                else if(BotonMedium1 == 1)
+                {
+                    BotonPulsado1 = 7;
+                }
+                else if(BotonLow1 == 1)
+                {
+                    BotonPulsado1 = 8;
+                }
+                else if(BotonAU1 == 1)
+                {
+                    BotonPulsado1 = 9;
+                }
                 break;
         }
     }

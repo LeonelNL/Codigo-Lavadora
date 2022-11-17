@@ -14,15 +14,20 @@
 #include "definiciones.h"
 #include "driverlib/uart.h"
 #include "configuracionUART.h"
-
+#include "machine_state.h"
 
 int main(void)
 {
-   ConfiguracionPines();
-   ConfigUART();
-   while(1)
+    ConfiguracionPines();
+    ConfigUART();
+    GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 0);
+
+    while(1)
     {
-        HighCycleLedDefault(BotonPulsado);
+//        HighCycleLedDefault(BotonPulsado1);
+
+        MachineState(BotonPulsado1);
+
         UARTCharPut(UART0_BASE, '#');
         UARTCharPut(UART0_BASE, 'E');
         UARTCharPut(UART0_BASE, 'n');
@@ -35,7 +40,7 @@ int main(void)
         UARTCharPut(UART0_BASE, 'x');
         UARTCharPut(UART0_BASE, 't');
         UARTCharPut(UART0_BASE, '&');
-        SysCtlDelay(133333);
+        SysCtlDelay(1333333);
     }
 }
 
