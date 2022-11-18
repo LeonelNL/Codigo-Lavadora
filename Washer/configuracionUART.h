@@ -10,6 +10,7 @@
 #include "driverlib/uart.h"
 
 char dato[1];
+uint8_t PhaseMachine;
 
 
 void ConfigUART()
@@ -77,21 +78,24 @@ void UARTIntHandler(void)
 
             case StartCicloSerial:
                 BotonPulsado1 = 2;
-                if(BotonHigh1 == 1)
+                if(PhaseMachine == 0 || 1 || 2)
                 {
-                    BotonPulsado1 = 6;
-                }
-                else if(BotonMedium1 == 1)
-                {
-                    BotonPulsado1 = 7;
-                }
-                else if(BotonLow1 == 1)
-                {
-                    BotonPulsado1 = 8;
-                }
-                else if(BotonAU1 == 1)
-                {
-                    BotonPulsado1 = 9;
+                    if(BotonHigh1 == 1)
+                    {
+                        BotonPulsado1 = 6;
+                    }
+                    else if(BotonMedium1 == 1)
+                    {
+                        BotonPulsado1 = 7;
+                    }
+                    else if(BotonLow1 == 1)
+                    {
+                        BotonPulsado1 = 8;
+                    }
+                    else if(BotonAU1 == 1)
+                    {
+                        BotonPulsado1 = 9;
+                    }
                 }
                 break;
         }

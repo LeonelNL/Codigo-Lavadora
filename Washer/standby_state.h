@@ -11,9 +11,6 @@ void Standby_State(uint8_t BotonPulsadoStandby)
 {
     switch(BotonPulsadoStandby)
     {
-        case 0:                                                 // Recien Endencido ciclo HIGH
-            GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 0);
-            break;
         case 1:                                                 //  High (Ciclo 1) LED CICLO 1 ON
             GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 16);
             break;
