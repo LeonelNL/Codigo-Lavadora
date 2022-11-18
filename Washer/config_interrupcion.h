@@ -13,6 +13,7 @@
 #define CycleButtons GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4
 uint8_t state = 0;
 uint8_t BotonPulsado1 = 0 , BotonHigh1 = 0, BotonMedium1 = 0, BotonLow1 = 0, BotonAU1 = 0;
+uint8_t PhaseMachine;
 
 void GPIOIntHandler()
 {
@@ -39,6 +40,10 @@ void GPIOIntHandler()
                 {
                     BotonPulsado1 = 9;
                 }
+                else if (PhaseMachine == 2 || 3)
+                {
+                    BotonPulsado1 = 2;
+                }
                 break;
             case 2:                                                                //Boton HIGH
                 BotonPulsado1 = 1;
@@ -61,46 +66,5 @@ void GPIOIntHandler()
                 BotonHigh1 = 0, BotonLow1 = 0, BotonMedium1 = 0;
                 break;
     }
-//    switch (state){
-//        case 1:                                                                 //BotonStart
-//            BotonPulsado = 2;
-//            if(BotonHigh == 1)
-//            {
-//                BotonPulsado = 6;
-//            }
-//            else if(BotonMedium == 1)
-//            {
-//                BotonPulsado = 7;
-//            }
-//            else if(BotonLow == 1)
-//            {
-//                BotonPulsado = 8;
-//            }
-//            else if(BotonAU == 1)
-//            {
-//                BotonPulsado = 9;
-//            }
-//            break;
-//        case 2:                                                                //Boton HIGH
-//            BotonPulsado = 1;
-//            BotonHigh = 1;
-//            BotonMedium = 0, BotonLow = 0, BotonAU = 0;
-//            break;
-//        case 4:                                                               //Boton MEDIUM
-//            BotonPulsado = 3;
-//            BotonMedium = 1;
-//            BotonHigh = 0, BotonLow = 0, BotonAU = 0;
-//            break;
-//        case 8:                                                              //Boton LOW
-//            BotonPulsado = 4;
-//            BotonLow = 1;
-//            BotonHigh = 0, BotonMedium = 0, BotonAU = 0;
-//            break;
-//        case 16:                                                             //Boton CICLO AU
-//            BotonPulsado = 5;
-//            BotonAU = 1;
-//            BotonHigh = 0, BotonLow = 0, BotonMedium = 0;
-//            break;
-//    }
 }
 

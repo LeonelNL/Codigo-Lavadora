@@ -6,8 +6,11 @@
 #include "definiciones.h"
 #include "idle_state.h"
 #include "standby_state.h"
+#include "run_state.h"
+#include "pause_state.h"
 
 uint8_t PhaseMachine, BotonPresionado;
+uint8_t BotonPulsado1;
 
 void MachineState(BotonPresionado)
 {
@@ -22,8 +25,13 @@ void MachineState(BotonPresionado)
             break;
 
         case RunState:
+            Run_State(BotonPresionado);
+            break;
 
+        case PauseState:
+            Pause_State(BotonPresionado);
             break;
     }
+    BotonPulsado1 = 0;
 }
 
