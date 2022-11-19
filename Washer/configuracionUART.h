@@ -74,7 +74,6 @@ void UARTIntHandler(void)
 
             case StartCicloSerial:
                 BotonPulsado1 = 2;
-
                 break;
         }
     }

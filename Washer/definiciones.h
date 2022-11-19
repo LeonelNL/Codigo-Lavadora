@@ -28,10 +28,4 @@
 #define CicloAU 4
 
 
-//#define BotonHigh 16
-//#define BotonLow 8
-//#define BotonMedium 4
-//#define BotonAU 2
-//#define BotonStart_Pausa 1
-
 
