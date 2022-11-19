@@ -7,7 +7,7 @@
 
 uint8_t PhaseMachine;
 
-void Idle_State(uint8_t BotonPulsadoIdle, uint8_t CicloSeleccionado)
+void Idle_State(uint8_t BotonPulsadoIdle)
 {
         switch(BotonPulsadoIdle)
         {

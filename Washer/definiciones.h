@@ -22,12 +22,6 @@
 #define PauseState 3
 #define EndOfCycle 4
 
-#define CicloHigh 1
-#define CicloMedium 2
-#define CicloLow 3
-#define CicloAU 4
-
-
 //#define BotonHigh 16
 //#define BotonLow 8
 //#define BotonMedium 4
