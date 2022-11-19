@@ -54,22 +54,22 @@ void UARTIntHandler(void)
 
             case CicloHighSerial:
                 BotonPulsado1 = 1;
-
+                CicloSeleccionado = CicloHigh;
                 break;
 
             case CicloMediumSerial:
                 BotonPulsado1 = 3;
-
+                CicloSeleccionado = CicloMedium;
                 break;
 
             case CicloLowSerial:
                 BotonPulsado1 = 4;
-
+                CicloSeleccionado = CicloLow;
                 break;
 
             case CicloAuSerial:
                 BotonPulsado1 = 5;
-
+                CicloSeleccionado = CicloAU;
                 break;
 
             case StartCicloSerial:
