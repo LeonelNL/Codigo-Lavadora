@@ -15,7 +15,7 @@ uint8_t state = 0;
 uint8_t CicloSeleccionado = 0;
 uint8_t BotonPulsado1;
 
-void GPIOIntHandler(uint8_t *PhaseState)
+void GPIOIntHandler()
 {
     GPIOIntClear(GPIO_PORTB_BASE, GPIO_INT_PIN_0|GPIO_INT_PIN_1|GPIO_INT_PIN_2|GPIO_INT_PIN_3|GPIO_INT_PIN_4);
     state = GPIOIntStatus(GPIO_PORTB_BASE, true);
