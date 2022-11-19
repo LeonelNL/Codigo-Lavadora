@@ -54,49 +54,28 @@ void UARTIntHandler(void)
 
             case CicloHighSerial:
                 BotonPulsado1 = 1;
-                BotonHigh1 = 1;
-                BotonMedium1 = 0, BotonLow1 = 0, BotonAU1 = 0;
+                CicloSeleccionado = CicloHigh;
+
                 break;
 
             case CicloMediumSerial:
                 BotonPulsado1 = 3;
-                BotonMedium1 = 1;
-                BotonHigh1 = 0, BotonLow1 = 0, BotonAU1 = 0;
+                CicloSeleccionado = CicloMedium;
                 break;
 
             case CicloLowSerial:
                 BotonPulsado1 = 4;
-                BotonLow1 = 1;
-                BotonHigh1 = 0, BotonMedium1 = 0, BotonAU1 = 0;
+                CicloSeleccionado = CicloLow;
                 break;
 
             case CicloAuSerial:
                 BotonPulsado1 = 5;
-                BotonAU1 = 1;
-                BotonHigh1 = 0, BotonLow1 = 0, BotonMedium1 = 0;
+
+                CicloSeleccionado = CicloAU;
                 break;
 
             case StartCicloSerial:
                 BotonPulsado1 = 2;
-                if(PhaseMachine == 0 || 1 || 2)
-                {
-                    if(BotonHigh1 == 1)
-                    {
-                        BotonPulsado1 = 6;
-                    }
-                    else if(BotonMedium1 == 1)
-                    {
-                        BotonPulsado1 = 7;
-                    }
-                    else if(BotonLow1 == 1)
-                    {
-                        BotonPulsado1 = 8;
-                    }
-                    else if(BotonAU1 == 1)
-                    {
-                        BotonPulsado1 = 9;
-                    }
-                }
                 break;
         }
     }
