@@ -9,7 +9,6 @@
 #include "driverlib/gpio.h"
 #include "driverlib/timer.h"
 #include "driverlib/pin_map.h"
-#include "highdefault.h"
 #include "config_pines.h"
 #include "definiciones.h"
 #include "driverlib/uart.h"
@@ -27,7 +26,6 @@ int main(void)
 //        HighCycleLedDefault(BotonPulsado1);
 
         MachineState(BotonPulsado1);
-
         UARTCharPut(UART0_BASE, '#');
         UARTCharPut(UART0_BASE, 'E');
         UARTCharPut(UART0_BASE, 'n');
