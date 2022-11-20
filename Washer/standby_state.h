@@ -10,6 +10,7 @@ uint8_t CicloIniciado;
 
 void Standby_State(uint8_t BotonPulsadoStandby, uint8_t CicloSeleccionado)
 {
+
     switch(BotonPulsadoStandby)
     {
         case 1:                                                 //  High (Ciclo 1) LED CICLO 1 ON
@@ -28,5 +29,6 @@ void Standby_State(uint8_t BotonPulsadoStandby, uint8_t CicloSeleccionado)
             GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 2);
             break;
     }
+
     CicloIniciado = CicloSeleccionado;
 }

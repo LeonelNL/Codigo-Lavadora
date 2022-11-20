@@ -17,6 +17,7 @@
 
 int main(void)
 {
+
     ConfiguracionPines();
     ConfigUART();
     GPIOPinWrite(GPIO_PORTF_BASE, CycleLeds, 0);
@@ -24,6 +25,7 @@ int main(void)
     while(1)
     {
         MachineState(BotonPulsado1);
+
         UARTCharPut(UART0_BASE, '#');
         UARTCharPut(UART0_BASE, 'E');
         UARTCharPut(UART0_BASE, 'n');

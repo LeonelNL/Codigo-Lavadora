@@ -3,6 +3,7 @@
 #include "inc/tm4c123gh6pm.h"
 #include "driverlib/sysctl.h"
 
+
 #define NivelBajoSerial 'A'
 #define NivelMedioSerial 'B'
 #define NivelAltoSerial 'C'
@@ -21,6 +22,7 @@
 #define RunState 2
 #define PauseState 3
 #define EndOfCycle 4
+
 
 #define CicloHigh 1
 #define CicloMedium 2

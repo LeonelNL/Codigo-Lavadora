@@ -31,6 +31,7 @@ void ConfigUART()
 
 void UARTIntHandler(void)
 {
+
     uint32_t ui32Status;
     ui32Status = UARTIntStatus(UART0_BASE, true); //get interrupt status
     UARTIntClear(UART0_BASE, ui32Status); //clear the asserted interrupts

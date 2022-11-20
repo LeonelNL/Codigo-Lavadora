@@ -15,6 +15,7 @@ uint8_t PhaseState;
 
 void MachineState(BotonPresionado)
 {
+
     switch(PhaseMachine)
     {
         case IdleState:
@@ -37,7 +38,6 @@ void MachineState(BotonPresionado)
             PhaseState = PauseState;
             break;
     }
-
     BotonPulsado1 = 0;
 }
 
