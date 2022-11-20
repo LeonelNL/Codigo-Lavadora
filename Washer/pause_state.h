@@ -9,7 +9,9 @@ uint8_t PhaseMachine;
 
 void Pause_State(uint8_t BotonPulsadoPause)
 {
+
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_0, 0); //blink LED
+
     switch(BotonPulsadoPause)
     {
         case 2:

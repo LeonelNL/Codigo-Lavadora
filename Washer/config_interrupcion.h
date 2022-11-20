@@ -9,14 +9,15 @@
 #include "driverlib/gpio.h"
 #include "definiciones.h"
 
-
 #define CycleButtons GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3|GPIO_PIN_4
+
 uint8_t state = 0;
 uint8_t BotonPulsado1 = 0 , BotonHigh1 = 0, BotonMedium1 = 0, BotonLow1 = 0, BotonAU1 = 0;
 uint8_t PhaseMachine;
 
 void GPIOIntHandler()
 {
+
     GPIOIntClear(GPIO_PORTB_BASE, GPIO_INT_PIN_0|GPIO_INT_PIN_1|GPIO_INT_PIN_2|GPIO_INT_PIN_3|GPIO_INT_PIN_4);
     state = GPIOIntStatus(GPIO_PORTB_BASE, true);
 

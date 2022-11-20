@@ -3,6 +3,7 @@
 #include "inc/tm4c123gh6pm.h"
 #include "driverlib/sysctl.h"
 
+
 #define NivelBajoSerial 'A'
 #define NivelMedioSerial 'B'
 #define NivelAltoSerial 'C'

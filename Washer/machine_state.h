@@ -14,6 +14,7 @@ uint8_t BotonPulsado1;
 
 void MachineState(BotonPresionado)
 {
+
     switch(PhaseMachine)
     {
         case IdleState:

@@ -9,6 +9,7 @@ uint8_t PhaseMachine;
 
 void Idle_State(uint8_t BotonPulsadoIdle)
 {
+
         switch(BotonPulsadoIdle)
         {
             case 0:                                                 // Recien Endencido ciclo HIGH

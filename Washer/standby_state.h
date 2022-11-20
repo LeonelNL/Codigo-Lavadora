@@ -9,6 +9,7 @@ uint8_t PhaseMachine;
 
 void Standby_State(uint8_t BotonPulsadoStandby)
 {
+
     switch(BotonPulsadoStandby)
     {
         case 1:                                                 //  High (Ciclo 1) LED CICLO 1 ON
@@ -43,4 +44,7 @@ void Standby_State(uint8_t BotonPulsadoStandby)
             PhaseMachine = RunState;
             break;
     }
+
+    CicloIniciado = CicloSeleccionado;
+
 }

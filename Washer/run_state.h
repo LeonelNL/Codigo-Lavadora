@@ -9,6 +9,7 @@ uint8_t PhaseMachine;
 
 void Run_State(uint8_t BotonPulsadoRun)
 {
+
     GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_0, 1);
     switch(BotonPulsadoRun)
     {
