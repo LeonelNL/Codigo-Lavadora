@@ -22,6 +22,7 @@
 #define PauseState 3
 #define EndOfCycle 4
 
+
 #define CicloHigh 1
 #define CicloMedium 2
 #define CicloLow 3

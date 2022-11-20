@@ -11,33 +11,27 @@
 
 uint8_t PhaseMachine, BotonPresionado;
 uint8_t BotonPulsado1;
-uint8_t PhaseState;
 
 void MachineState(BotonPresionado)
 {
     switch(PhaseMachine)
     {
         case IdleState:
-            Idle_State(BotonPresionado, CicloSeleccionado);
-            PhaseState = IdleState;
+            Idle_State(BotonPresionado);
             break;
 
         case StandbyState:
-            Standby_State(BotonPresionado, CicloSeleccionado);
-            PhaseState = StandbyState;
+            Standby_State(BotonPresionado);
             break;
 
         case RunState:
-            Run_State(BotonPresionado, CicloIniciado);
-            PhaseState = RunState;
+            Run_State(BotonPresionado);
             break;
 
         case PauseState:
             Pause_State(BotonPresionado);
-            PhaseState = PauseState;
             break;
     }
-
     BotonPulsado1 = 0;
 }
 
