@@ -24,6 +24,8 @@ int main(void)
 
     while(1)
     {
+//        HighCycleLedDefault(BotonPulsado1);
+
         MachineState(BotonPulsado1);
 
         UARTCharPut(UART0_BASE, '#');
