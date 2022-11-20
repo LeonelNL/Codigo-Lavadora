@@ -38,7 +38,6 @@ void Run_State(uint8_t BotonPulsadoRun, uint8_t CicloIniciado)
 
             break;
 
-
     }
 
 }
